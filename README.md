@@ -84,7 +84,9 @@ or <br />
 `https://nipan-blogapi.herokuapp.com/blogpost` <br />
 
 This route allows user to create a blog post with following parameters <br />
+
 ▪ Title, content <br />
+
 Authentication is handled here using `JWT`
 
 ![alt text](https://i.imgur.com/XURrohi.png) <br />
@@ -97,7 +99,9 @@ Authentication is handled here using `JWT`
 `http://localhost:3000/follow/{username}`<br />
 or <br />
 `https://nipan-blogapi.herokuapp.com/follow/{username}`<br />
+
 This route allows you to follow new users <br />
+
 ![alt text](https://i.imgur.com/DOA5RVB.png)
 
 ### GET feed
@@ -105,8 +109,10 @@ This route allows you to follow new users <br />
 `http://localhost:3000/feed` <br />
 or <br />
 `https://nipan-blogapi.herokuapp.com/feed` <br />
+
 This route returns all blog posts of users you follow
 <br />
+
 ![alt text](https://i.imgur.com/6e14y8D.png)
 
 `NOTE: For viewing own blog post user have to follow himself.`

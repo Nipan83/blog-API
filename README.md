@@ -131,6 +131,20 @@ This route is for monitoring purpose.
 
 Token will also be needed here.
 
+## TESTING
+
+```sh
+
+	# TESTING of APIs
+	npm test
+
+	# NOTE: Since email field is unique for registering a user. So register testcase may fail after running `npm test` two times.
+
+	# To prevent the error, open test/test.js and change the email value to a new emailId.
+
+```
+
+
 ## AUTHOR
 
 Created and Maintained by [@Nipan83](https://github.com/Nipan83) - nipandas83@gmail.com

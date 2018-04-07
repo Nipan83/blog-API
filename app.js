@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/user/getuser',getUser);
+app.use('/getuser',getUser);
 app.use('/register',postUser);
 app.use('/login',loginUser);
 app.use('/blogpost',blogPost);

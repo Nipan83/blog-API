@@ -1,22 +1,15 @@
-const bodyParser = require("body-parser");
 var express = require('express');
 var router = express.Router();
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 var config = require('../../config');
-
-router.use(bodyParser.urlencoded({
-    extended: true
-}));
-
-router.use(bodyParser.json());
-
+var Blog = require('../../models/blog');
 var User = require('../../models/user');
 
 
 
-/* POST route to get all user in the app. */
-router.post('/', function(req, res) {
+/* POST route to register user in the app. */
+router.post('/', function(req, res, next) {
     console.log(req.body);
     
   
@@ -31,14 +24,16 @@ router.post('/', function(req, res) {
     blogURL : req.body.blogURL
   },
   function (err, user) {
+    console.log(user);
 
-    if (err) return res.status(500).json("There was a problem registering the user.")
+    if (err) return res.send(err);
         
 
     res.status(200).json({message: "successfully registered!" });
 
   }); 
 });
+
 
 
 

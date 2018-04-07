@@ -49,11 +49,11 @@ or <br />
 
 `https://nipan-blogapi.herokuapp.com/register`
 
-This route allows user to register herself on the platform with basic information <br />
+This route allows a user to register herself on the platform with basic information <br />
 
 ▪ `username`, `password`, `firstname`, `lastname`, `blogURL` <br />
 
-All you need to do is pass the informations in the request body in key value pair 
+All you need to do is pass the information in the request body in key-value pair 
 
 ![alt text](https://i.imgur.com/yEhygsc.png)
 
@@ -65,11 +65,11 @@ or <br />
 
 `https://nipan-blogapi.herokuapp.com/login` <br />
 
-This route allows user to login herself on the platform with basic information <br />
+This route allows a user to log in herself on the platform with basic information <br />
 
 ▪ `email` and `password` <br />
 
-All you need to do is pass the informations in the request body in key value pair 
+All you need to do is pass the information in the request body in key-value pair 
 
 A `JWT TOKEN` will be returned which will be used for further using the API.
 
@@ -83,7 +83,7 @@ The token should be placed in header `key` as `x-access-token` and `value` will 
 or <br />
 `https://nipan-blogapi.herokuapp.com/blogpost` <br />
 
-This route allows user to create a blog post with following parameters <br />
+This route allows a user to create a blog post with following parameters <br />
 
 ▪ Title, content <br />
 
@@ -125,7 +125,7 @@ This route returns all blog posts of users you follow
 or <br />
 `https://nipan-blogapi.herokuapp.com/getuser`<br />
 
-This routes returns all the users registered.
+This route returns all the users registered.
 
 This route is for monitoring purpose.
 
@@ -138,7 +138,7 @@ Token will also be needed here.
 	# TESTING of APIs
 	npm test
 
-	# NOTE: Since email field is unique for registering a user. So register testcase may fail after running `npm test` two times.
+	# NOTE: Since email field is unique for registering a user. So register test case may fail after running npm test two times.
 
 	# To prevent the error, open test/test.js and change the email value to a new emailId.
 
@@ -148,4 +148,3 @@ Token will also be needed here.
 ## AUTHOR
 
 Created and Maintained by [@Nipan83](https://github.com/Nipan83) - nipandas83@gmail.com
-

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha 'test/**/*.js' --timeout 10000 --exit"
+    "test": "mocha --exit --timeout 10000 || true"
   },
   "dependencies": {
     "babel-core": "^6.26.0",

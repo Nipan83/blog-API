@@ -54,7 +54,7 @@ describe('register', function () {
   it('user registration', function (done) {
     request(app)
             .post('/register')
-            .send({ email: 'nipandas6@gmail.com', password: '12345', username: 'nipan2', blogURL:'github.com/nipan2', firstname:'nipan', lastname:'das' })
+            .send({ email: 'nipandas8@gmail.com', password: '12345', username: 'nipan2', blogURL:'github.com/nipan2', firstname:'nipan', lastname:'das' })
             .expect(200, done)
             
   })

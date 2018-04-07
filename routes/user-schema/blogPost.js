@@ -10,6 +10,7 @@ router.post('/', function(req, res, next) {
     
     console.log(req.cookies.user);
     var user = req.cookies.user;
+    if(!user) return res.status(404).json({message:"no cookies available! Please Login"});
     
     
     var token = req.headers['x-access-token'];
@@ -33,6 +34,7 @@ router.post('/', function(req, res, next) {
     if (err) return res.status(500).json("There was a problem posting the blog.")
 
     res.status(200).json({message: "successfully posted!" });
+    console.log(blog);
   }); 
     });
 });

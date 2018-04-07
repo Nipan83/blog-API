@@ -39,8 +39,6 @@ router.put('/:username', function(req, res, next) {
             if(!user) return res.status(404).json({message:'No username found.'});
             followedId = user._id;
 
-            
-            
             User.update({_id:id},
             {
                 $push:{
@@ -48,6 +46,8 @@ router.put('/:username', function(req, res, next) {
                 }
             },function(err, user){
                 if(err) return res.status(500).json({message:"There was a problem finding the user"});
+                //this is not that user
+
                 res.json(user)
             }
 

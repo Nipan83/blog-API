@@ -5,6 +5,14 @@ var config = require('../../config');
 var bcrypt = require('bcryptjs');
 var User = require('../../models/user');
 
+
+/*
+    Route for all the users available
+    
+    Authentication is handled using JWT.
+
+   
+*/
 router.get('/', function(req, res, next) {
 
     var token = req.headers['x-access-token'];

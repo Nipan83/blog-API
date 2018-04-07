@@ -9,6 +9,7 @@ var User = require('../../models/user');
 
 
 /* POST route to register user in the app. */
+
 router.post('/', function(req, res, next) {
     console.log(req.body);
     

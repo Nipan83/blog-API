@@ -10,6 +10,14 @@ router.use(bodyParser.urlencoded({
     extended: true
 }));
 
+
+
+/*
+    Post Route for login
+    
+    Token will be generated here
+*/
+
 router.post('/', function(req, res) {
 
 

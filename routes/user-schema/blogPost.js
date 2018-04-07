@@ -6,6 +6,15 @@ var bcrypt = require('bcryptjs');
 var User = require('../../models/user');
 var Blog = require('../../models/blog');
 
+
+/*
+    Post route for posting blog
+    
+    Authentication is handled using JWT.
+
+    Token will be needed for posting a blog which
+    will be provided in login
+*/
 router.post('/', function(req, res, next) {
     
     console.log(req.cookies.user);

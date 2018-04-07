@@ -5,6 +5,15 @@ var config = require('../../config');
 var bcrypt = require('bcryptjs');
 var User = require('../../models/user');
 
+/*
+    Route for follow a particular user
+    
+    Authentication is handled using JWT.
+
+    Token will be needed to follow a user which
+    will be provided in login
+*/
+
 router.put('/:username', function(req, res, next) {
 
     
@@ -46,9 +55,9 @@ router.put('/:username', function(req, res, next) {
                 }
             },function(err, user){
                 if(err) return res.status(500).json({message:"There was a problem finding the user"});
-                //this is not that user
+                
 
-                res.json(user)
+                res.json({message:"you have successfully followed "+ username})
             }
 
                 )

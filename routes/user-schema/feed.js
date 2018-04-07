@@ -6,6 +6,16 @@ var bcrypt = require('bcryptjs');
 var Blog = require('../../models/blog');
 var User = require('../../models/user');
 
+
+/*
+    Get route for getting all the blogs from the users you follow
+    
+    Authentication is handled using JWT.
+
+    Token will be needed for retrieving blogs which
+    will be provided in login
+*/
+
 router.get('/', function(req, res, next) {
     console.log(req.cookies.user);
     var user = req.cookies.user;

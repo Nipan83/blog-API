@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-//user schema
+//user routes =========================================
 var getUser = require('./routes/user-schema/getUser');
 var loginUser = require('./routes/user-schema/loginUser');
 var postUser = require('./routes/user-schema/postUser');
@@ -20,16 +20,17 @@ var follow = require('./routes/user-schema/follow');
 
 
 var app = express();
+
+//for connecting mongodb database mlab uri is used
 var configDB = require('./config.js');
 
-// configuration ===============================================================
+// configuration =========================================
 mongoose.connect(configDB.url); // connect to the database
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -46,7 +47,7 @@ app.use('/feed',feed);
 app.use('/follow',follow);
 
 
-// catch 404 and forward to error handler
+// error handling
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

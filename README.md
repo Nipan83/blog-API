@@ -2,6 +2,8 @@
 
 This is a simple REST API server implementation built on top `Node.js` and `Express.js` with `Mongoose.js` for `MongoDB` integration. Authentication is handled using `JWT` integration.
 
+[![Build Status](https://travis-ci.org/Nipan83/blog-API.svg?branch=master)](https://travis-ci.org/Nipan83/blog-API)
+
 ## Get Started:
 
 `git clone https://github.com/Nipan83/blog-API.git`

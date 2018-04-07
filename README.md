@@ -81,7 +81,7 @@ The token should be placed in header `key` as `x-access-token` and `value` will 
 
 ![alt text](https://i.imgur.com/FHMV8e9.png)
 
-### POST Blogost
+### POST Blogpost
 
 `http://localhost:3000/blogpost` <br />
 or <br />

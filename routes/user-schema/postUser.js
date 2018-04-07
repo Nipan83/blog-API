@@ -14,8 +14,10 @@ router.post('/', function(req, res, next) {
     
   
   var hashedPassword = bcrypt.hashSync(req.body.password, 8);
-  
-  User.create({
+  User.findOne({email: req.body.email},function(err,user){
+      if(!user){
+
+        User.create({
     username : req.body.username,
     email : req.body.email,
     password : hashedPassword,
@@ -32,6 +34,18 @@ router.post('/', function(req, res, next) {
     res.status(200).json({message: "successfully registered!" });
 
   }); 
+
+      }
+      if(user){
+        return res.status(401).json({
+             
+             message: 'email-id already registered!'
+         });
+      }
+
+  });
+  
+  
 });
 
 

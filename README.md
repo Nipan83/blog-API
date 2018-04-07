@@ -1,6 +1,6 @@
 # Node BLOG REST API
 
-This is a simple REST API server implementation built on top `Node.js` and `Express.js` with `Mongoose.js` for `MongoDB` integration. Authentication is handled using `JWT` integration.
+This is a simple REST API server implementation built on top `Node.js` and `Express.js` with `Mongoose.js` for `MongoDB` integration. Authentication is handled using `JWT` integration. Testing is handled using mocha and chai
 
 [![Build Status](https://travis-ci.org/Nipan83/blog-API.svg?branch=master)](https://travis-ci.org/Nipan83/blog-API)
 
@@ -53,7 +53,9 @@ or <br />
 
 This route allows a user to register herself on the platform with basic information <br />
 
-▪ `username`, `password`, `firstname`, `lastname`, `blogURL` <br />
+▪ `username`, `email`, `password`, `firstname`, `lastname`, `blogURL` <br />
+
+Email must be unique for new registration.
 
 All you need to do is pass the information in the request body in key-value pair 
 

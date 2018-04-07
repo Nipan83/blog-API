@@ -34,7 +34,7 @@ router.post('/', function(req, res) {
     });
     res.cookie('user', user);
 
-    res.status(200).send({ auth: true, token: token, message: "successfully logged in!" });
+    res.status(200).send({ auth: true, token: token, message: "successfully logged in!", user:user });
   });
 });
 

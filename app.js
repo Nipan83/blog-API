@@ -13,6 +13,11 @@ var users = require('./routes/users');
 var getUser = require('./routes/user-schema/getUser');
 var loginUser = require('./routes/user-schema/loginUser');
 var postUser = require('./routes/user-schema/postUser');
+var blogPost = require('./routes/user-schema/blogPost');
+var feed = require('./routes/user-schema/feed');
+var follow = require('./routes/user-schema/follow');
+
+
 
 var app = express();
 var configDB = require('./config.js');
@@ -36,6 +41,10 @@ app.use('/users', users);
 app.use('/user/getuser',getUser);
 app.use('/user/postuser',postUser);
 app.use('/user/loginuser',loginUser);
+app.use('/user/blogpost',blogPost);
+app.use('/user/feed',feed);
+app.use('/user/follow',follow);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

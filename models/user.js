@@ -27,7 +27,12 @@ var userSchema = mongoose.Schema({
   },
   blogURL: {
   	type: String
-  }
+  },
+  followed :{
+  type: [String]
+  
+  
+}
     
 });
 
@@ -45,6 +50,16 @@ module.exports.postUser = function(data, callback) {
 
 
 //login user
-module.exports.loginCreche = function(id, callback) {
+module.exports.loginUser = function(id, callback) {
     User.findOne({ "email": id }, callback);
+}
+
+//find user
+module.exports.findUser = function(id, callback) {
+    User.findOne({ "username": id }, callback);
+}
+
+//update user
+module.exports.updateUser = function(id, callback) {
+    User.update({ "_id": id }, callback);
 }

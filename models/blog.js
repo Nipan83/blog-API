@@ -13,9 +13,12 @@ timestamp: {
     type: String,
     required: true
   },
-  author: {
-    type: Schema.Types.ObjectId,
+  authorId: {
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
+  },
+  authorName: {
+    type: String
   }
 
 });

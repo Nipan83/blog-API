@@ -27,6 +27,8 @@ router.post('/', function(req, res) {
     res.cookie('email', req.body.email);
     console.log(email);
 
+    if(req.body.email && !req.body.password){return res.status(404).send('password is not given');}
+
     User.loginUser(email, function(err, user) {
 
     if (err) return res.status(500).send('Error on the server.');

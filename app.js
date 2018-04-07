@@ -39,11 +39,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/user/getuser',getUser);
-app.use('/user/postuser',postUser);
-app.use('/user/loginuser',loginUser);
-app.use('/user/blogpost',blogPost);
-app.use('/user/feed',feed);
-app.use('/user/follow',follow);
+app.use('/register',postUser);
+app.use('/login',loginUser);
+app.use('/blogpost',blogPost);
+app.use('/feed',feed);
+app.use('/follow',follow);
 
 
 // catch 404 and forward to error handler
